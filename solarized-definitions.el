@@ -92,7 +92,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                                  3
                                (if solarized-broken-srgb 2 1))
                            (case (display-color-cells)
-                             (16777216 6)
+                             (16777216 1)
                              (16 4)
                              (8  5)
                              (otherwise 4)))))
@@ -373,6 +373,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              ;; Flymake
              (flymake-errline ((t (,@fmt-revr ,@fg-red ,@bg-back)))) ; ErrorMsg
              (flymake-warnline ; WarningMsg
+              ((t (,@fmt-bold ,@fg-red ,@bg-back))))
+             ;; Flycheck
+             (flycheck-error ((t (,@fmt-revr ,@fg-red ,@bg-back)))) ; ErrorMsg
+             (flycheck-warning ; WarningMsg
               ((t (,@fmt-bold ,@fg-red ,@bg-back))))
              ;; column-marker
              (column-marker-1 ((t (,@bg-base01))))
