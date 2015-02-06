@@ -378,6 +378,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (flymake-errline ((t (,@fmt-revr ,@fg-red ,@bg-back)))) ; ErrorMsg
              (flymake-warnline ; WarningMsg
               ((t (,@fmt-bold ,@fg-red ,@bg-back))))
+             ;; Flycheck
+             (flycheck-error ((t (,@fmt-revr ,@fg-red ,@bg-back)))) ; ErrorMsg
+             (flycheck-warning ; WarningMsg
+              ((t (,@fmt-bold ,@fg-red ,@bg-back))))
              ;; column-marker
              (column-marker-1 ((t (,@bg-base01))))
              (column-marker-2 ((t (,@bg-cyan))))
